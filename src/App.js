@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <h1>hello designo</h1>
       <Switch>
         <Route path="/" exact>
           <Home />

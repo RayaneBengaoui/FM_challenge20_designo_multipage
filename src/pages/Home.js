@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 
+import Introduction from "../components/HomePage/Introduction";
+
 const Home = () => {
   return (
     <div className="home">
-      <h1>Home</h1>
-      <h2>
-        <Link to="/webdesign/">webdesign link</Link>
-      </h2>
+      <Introduction />
     </div>
   );
 };

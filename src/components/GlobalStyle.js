@@ -15,7 +15,7 @@ html{
 body{
     min-height:100vh;
     --burger-span: #000000;
-
+    --peach : #E7816B;
 }
 
 `;
