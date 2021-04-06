@@ -14,6 +14,8 @@ html{
 
 body{
     min-height:100vh;
+    --burger-span: #000000;
+
 }
 
 `;
