@@ -12,7 +12,9 @@ html{
     font-family: 'Jost', sans-serif;
 }
 
-
+body{
+    min-height:100vh;
+}
 
 `;
 
