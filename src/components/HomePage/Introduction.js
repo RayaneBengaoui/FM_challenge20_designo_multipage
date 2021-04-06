@@ -15,6 +15,7 @@ const Introduction = () => {
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
         </p>
+        <button>Learn More</button>
       </Presentation>
       <BackgroundCircle src={background_circle} />
       <Phone src={phone} />
@@ -23,13 +24,28 @@ const Introduction = () => {
 };
 
 const IntroductionStyle = styled(motion.section)`
-  min-height: 90vh;
+  min-height: 53rem;
   position: relative;
   background-color: var(--peach);
   overflow: hidden;
+  padding: 0 2.5rem;
 `;
 
-const Presentation = styled.div``;
+const Presentation = styled.div`
+  padding-top: 5rem;
+  text-align: center;
+  max-width: 21.5rem;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+
+  p {
+    color: white;
+    line-height: 1.625rem;
+    padding: 1.5rem 0rem;
+    font-size: 15px;
+  }
+`;
 
 const BackgroundCircle = styled.img`
   position: absolute;
@@ -42,7 +58,7 @@ const BackgroundCircle = styled.img`
 const Phone = styled.img`
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: -1.5rem;
   max-width: 150%;
   transform: translate(-50%, 38%);
 `;
