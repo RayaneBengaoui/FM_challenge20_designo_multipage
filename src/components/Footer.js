@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+import CallAction from "./CallAction";
+
 import logo_light from "../assets/shared/desktop/logo-light.png";
 import icon_fb from "../assets/shared/desktop/icon-facebook.svg";
 import icon_yt from "../assets/shared/desktop/icon-youtube.svg";
@@ -9,9 +11,10 @@ import icon_twitter from "../assets/shared/desktop/icon-twitter.svg";
 import icon_pint from "../assets/shared/desktop/icon-pinterest.svg";
 import icon_insta from "../assets/shared/desktop/icon-instagram.svg";
 
-const Footer = () => {
+const Footer = ({ callAction }) => {
   return (
-    <FooterStyle>
+    <FooterStyle callAction={callAction}>
+      {callAction && <CallAction />}
       <Navigation>
         <Logo src={logo_light} />
         <NavLinks>
@@ -58,13 +61,16 @@ const Footer = () => {
 };
 
 const FooterStyle = styled(motion.footer)`
-  min-height: 63rem;
+  position: relative;
+  min-height: ${(props) => (props.callAction ? "51rem" : "40rem")};
+
   padding: 0 1.5rem;
-  padding-top: 25rem;
+  padding-top: ${(props) => (props.callAction ? "15rem" : "0rem")};
   background-color: var(--footer-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;
 
 const Navigation = styled.div`

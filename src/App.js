@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import { useState } from "react";
 
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
@@ -7,6 +8,8 @@ import Home from "./pages/Home";
 import WebDesign from "./pages/WebDesign";
 
 function App() {
+  const [callAction, setCallAction] = useState(true);
+
   return (
     <div className="App">
       <GlobalStyle />
@@ -19,7 +22,7 @@ function App() {
           <WebDesign />
         </Route>
       </Switch>
-      <Footer />
+      <Footer callAction={callAction} />
     </div>
   );
 }
