@@ -1,17 +1,19 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-// import background_circle from "../../assets/home/desktop/bg-pattern-hero-home.svg";
 import icon_right_arrow from "../assets/shared/desktop/icon-right-arrow.svg";
-const ViewProject = ({ title, images }) => {
+
+const ViewProject = ({ title, images, linkPath }) => {
   return (
-    <ViewProjectStyle images={images}>
-      <h1>{title}</h1>
-      <LinkContainer>
-        <p>View Projects</p>
-        <Arrow src={icon_right_arrow} />
-      </LinkContainer>
-    </ViewProjectStyle>
+    <Link to={linkPath}>
+      <ViewProjectStyle images={images}>
+        <h1>{title}</h1>
+        <LinkContainer>
+          <p>View Projects</p>
+          <Arrow src={icon_right_arrow} />
+        </LinkContainer>
+      </ViewProjectStyle>
+    </Link>
   );
 };
 

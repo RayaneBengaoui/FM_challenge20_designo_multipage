@@ -28,8 +28,19 @@ h1{
     line-height: 2.25rem;
 }
 
+h3{
+    font-size:1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #333136;
+}
+
 p{
     font-size: 1rem;
+    font-weight: 400;
+    color: #333136;
+    line-height: 1.625rem;
 }
 
 button{
@@ -46,6 +57,10 @@ button{
     width:9.5rem;
     height: 3.5rem;
     border-radius: .5rem;
+}
+
+a{
+    text-decoration: none;
 }
 
 `;

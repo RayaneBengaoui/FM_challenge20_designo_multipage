@@ -41,7 +41,7 @@ const Presentation = styled.div`
 
   p {
     color: white;
-    line-height: 1.625rem;
+
     padding: 1.5rem 0rem;
     font-size: 15px;
   }

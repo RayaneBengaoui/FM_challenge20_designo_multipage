@@ -37,9 +37,21 @@ const ViewProjects = () => {
 
   return (
     <ViewProjectsStyle>
-      <ViewProject title="web design" images={web_design_images} />
-      <ViewProject title="app design" images={app_design_images} />
-      <ViewProject title="graphic design" images={graphic_design_images} />
+      <ViewProject
+        title="web design"
+        images={web_design_images}
+        linkPath="/webdesign/"
+      />
+      <ViewProject
+        title="app design"
+        images={app_design_images}
+        linkPath="/appdesign/"
+      />
+      <ViewProject
+        title="graphic design"
+        images={graphic_design_images}
+        linkPath="/graphicdesign/"
+      />
     </ViewProjectsStyle>
   );
 };
