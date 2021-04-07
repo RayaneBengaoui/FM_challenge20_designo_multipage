@@ -15,6 +15,7 @@ html{
 body{
     min-height:100vh;
     --burger-span: #1D1C1E;
+    --footer-bg: #1D1C1E;
     --title-color: #ffffff;
     --button-bg: #ffffff;
     --button-text-color : #333136;
@@ -61,6 +62,7 @@ button{
 
 a{
     text-decoration: none;
+    color:white;
 }
 
 `;
