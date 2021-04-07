@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 // import background_circle from "../../assets/home/desktop/bg-pattern-hero-home.svg";
 import icon_right_arrow from "../assets/shared/desktop/icon-right-arrow.svg";
-const ViewProject = ({ title, image }) => {
+const ViewProject = ({ title, images }) => {
   return (
-    <ViewProjectStyle image={image}>
+    <ViewProjectStyle images={images}>
       <h1>{title}</h1>
       <LinkContainer>
         <p>View Projects</p>
@@ -20,7 +20,7 @@ const ViewProjectStyle = styled.div`
   height: 250px;
   border-radius: 15px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${(props) => props.image});
+    url(${(props) => props.images.mobile});
   background-repeat: no-repeat;
   background-size: cover;
   text-transform: uppercase;
@@ -28,10 +28,20 @@ const ViewProjectStyle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 1.625rem;
 
   h1 {
     font-size: 1.75rem;
     letter-spacing: 1.4px;
+  }
+
+  @media screen and (min-width: 700px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${(props) => props.images.tablet});
+  }
+  @media screen and (min-width: 1400px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${(props) => props.images.desktop});
   }
 `;
 
