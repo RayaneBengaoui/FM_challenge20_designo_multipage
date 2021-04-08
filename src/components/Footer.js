@@ -18,15 +18,9 @@ const Footer = ({ callAction }) => {
       <Navigation>
         <Logo src={logo_light} />
         <NavLinks>
-          <Link to="">
-            <a>OUR COMPANY</a>
-          </Link>
-          <Link to="">
-            <a>LOCATIONS</a>
-          </Link>
-          <Link to="">
-            <a>CONTACT</a>
-          </Link>
+          <Link to="">OUR COMPANY</Link>
+          <Link to="">LOCATIONS</Link>
+          <Link to="">CONTACT</Link>
         </NavLinks>
       </Navigation>
       <Contacts>
