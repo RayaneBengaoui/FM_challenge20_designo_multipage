@@ -1,24 +1,45 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import background_circle from "../../assets/home/desktop/bg-pattern-hero-home.svg";
 import phone from "../../assets/home/desktop/image-hero-phone.png";
 
+import { Hide } from "../../layout";
+
+import { titleAnim, fade } from "../../animation";
+
 const Introduction = () => {
+  const { scrollY } = useViewportScroll();
+  const phone_y = useTransform(scrollY, [0, 500], [350, 500]);
+
   return (
     <IntroductionStyle>
       <Presentation>
-        <h1>Award-winning custom designs and digital branding solutions</h1>
-        <p>
+        <Hide>
+          <motion.h1 variants={titleAnim}>
+            Award-winning custom designs and digital branding solutions
+          </motion.h1>
+        </Hide>
+        <motion.p variants={fade}>
           With over 10 years in the industry, we are experienced in creating
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
-        </p>
-        <button>Learn More</button>
+        </motion.p>
+        <motion.button
+          variants={fade}
+          whileHover={{
+            scale: 1.1,
+            backgroundColor: "#FFAD9B",
+            color: "white",
+          }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Learn More
+        </motion.button>
       </Presentation>
       <BackgroundCircle src={background_circle} />
-      <Phone src={phone} />
+      <Phone src={phone} style={{ y: phone_y, translateX: "-50%" }} />
     </IntroductionStyle>
   );
 };
@@ -47,7 +68,7 @@ const Presentation = styled.div`
   }
 `;
 
-const BackgroundCircle = styled.img`
+const BackgroundCircle = styled(motion.img)`
   position: absolute;
   width: 44rem;
   top: 5rem;
@@ -55,12 +76,12 @@ const BackgroundCircle = styled.img`
   transform: rotate(-45deg);
 `;
 
-const Phone = styled.img`
+const Phone = styled(motion.img)`
   position: absolute;
   left: 50%;
   bottom: -1.5rem;
   max-width: 150%;
-  transform: translate(-50%, 38%);
+  /* transform: translate(-50%, 38%); */
 `;
 
 export default Introduction;

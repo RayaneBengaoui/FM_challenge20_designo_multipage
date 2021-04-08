@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import bg_circle from "../assets/shared/desktop/bg-pattern-call-to-action.svg";
+import { motion } from "framer-motion";
 
 const CallAction = () => {
   return (
@@ -12,7 +13,16 @@ const CallAction = () => {
         Ready to take it to the next level? Contact us today and find out how
         our expertise can help your business grow.
       </p>
-      <button>Get in touch</button>
+      <motion.button
+        whileHover={{
+          scale: 1.1,
+          backgroundColor: "#FFAD9B",
+          color: "white",
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
+        Get in touch
+      </motion.button>
     </CallActionstyle>
   );
 };
