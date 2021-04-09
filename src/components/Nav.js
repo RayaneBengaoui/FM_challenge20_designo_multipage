@@ -27,12 +27,15 @@ const Nav = () => {
       <NavLinks toggle={toggle}>
         <Link
           className="firstLink"
-          to=""
+          to="/"
           onClick={() => setToggle((prevState) => !prevState)}
         >
           <span>OUR COMPANY</span>
         </Link>
-        <Link to="" onClick={() => setToggle((prevState) => !prevState)}>
+        <Link
+          to="/locations"
+          onClick={() => setToggle((prevState) => !prevState)}
+        >
           <span>LOCATIONS</span>
         </Link>
         <Link

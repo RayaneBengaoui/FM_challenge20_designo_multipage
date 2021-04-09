@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import WebDesign from "./pages/WebDesign";
 import AppDesign from "./pages/AppDesign";
 import GraphicDesign from "./pages/GraphicDesign";
+import Locations from "./pages/Locations";
 
 function App() {
   const [callAction, setCallAction] = useState(true);
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/graphicdesign" exact>
             <GraphicDesign />
+          </Route>
+          <Route path="/locations" exact>
+            <Locations />
           </Route>
         </Switch>
       </AnimatePresence>
