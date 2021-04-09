@@ -43,6 +43,7 @@ const MapStyle = styled.div`
   width: 100%;
   position: relative;
   z-index: 1;
+  margin-bottom: 2.5rem;
 
   .leaflet-container {
     width: 100%;
@@ -65,7 +66,6 @@ const MapInformation = styled.div`
 
   p {
     text-align: center;
-
     max-width: 190px;
   }
 
