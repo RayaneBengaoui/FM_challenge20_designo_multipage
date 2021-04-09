@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import WebDesign from "./pages/WebDesign";
 import AppDesign from "./pages/AppDesign";
+import GraphicDesign from "./pages/GraphicDesign";
 
 function App() {
   const [callAction, setCallAction] = useState(true);
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/appdesign" exact>
             <AppDesign />
+          </Route>
+          <Route path="/graphicdesign" exact>
+            <GraphicDesign />
           </Route>
         </Switch>
       </AnimatePresence>
