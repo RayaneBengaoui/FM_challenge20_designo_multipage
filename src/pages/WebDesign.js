@@ -74,17 +74,18 @@ const WebDesign = () => {
           }
           image={image_camp}
         />
-
-        <ViewProject
-          title="app design"
-          images={app_design_images}
-          linkPath="/appdesign/"
-        />
-        <ViewProject
-          title="graphic design"
-          images={graphic_design_images}
-          linkPath="/graphicdesign/"
-        />
+        <ViewProjects>
+          <ViewProject
+            title="app design"
+            images={app_design_images}
+            linkPath="/appdesign/"
+          />
+          <ViewProject
+            title="graphic design"
+            images={graphic_design_images}
+            linkPath="/graphicdesign/"
+          />
+        </ViewProjects>
       </Projects>
       <ScrollTop />
     </motion.div>
@@ -94,7 +95,11 @@ const WebDesign = () => {
 const Projects = styled.div`
   min-height: 100vh;
   padding: 0 1.5rem;
-  margin-bottom: 20rem;
+`;
+
+const ViewProjects = styled.div`
+  margin-top: 6rem;
+  margin-bottom: 18.5rem;
 `;
 
 export default WebDesign;
