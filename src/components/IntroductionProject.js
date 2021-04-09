@@ -22,6 +22,7 @@ const IntroductionProjectStyle = styled.div`
   align-items: center;
   text-align: center;
   padding: 0 1.5rem;
+  margin-bottom: 6rem;
   p {
     color: white;
     padding: 1.5rem 0rem;
@@ -32,10 +33,7 @@ const IntroductionProjectStyle = styled.div`
 
 const Circle = styled.img`
   position: absolute;
-
   width: 17rem;
-  /* right: 10%; */
-
   transform: rotate(-90deg);
 `;
 

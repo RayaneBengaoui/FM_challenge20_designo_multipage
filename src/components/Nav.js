@@ -25,13 +25,21 @@ const Nav = () => {
         <Line className="line3" />
       </Burger>
       <NavLinks toggle={toggle}>
-        <Link className="firstLink" to="">
+        <Link
+          className="firstLink"
+          to=""
+          onClick={() => setToggle((prevState) => !prevState)}
+        >
           <span>OUR COMPANY</span>
         </Link>
-        <Link to="">
+        <Link to="" onClick={() => setToggle((prevState) => !prevState)}>
           <span>LOCATIONS</span>
         </Link>
-        <Link className="lastLink" to="">
+        <Link
+          className="lastLink"
+          to=""
+          onClick={() => setToggle((prevState) => !prevState)}
+        >
           <span> CONTACT</span>
         </Link>
       </NavLinks>
