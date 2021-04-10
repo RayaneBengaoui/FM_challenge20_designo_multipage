@@ -15,7 +15,9 @@ const Nav = () => {
 
   return (
     <NavStyle>
-      <Logo src={logo_dark} />
+      <Link className="logoContainer" to="">
+        <Logo src={logo_dark} />
+      </Link>
       <Burger
         toggle={toggle}
         onClick={() => setToggle((prevState) => !prevState)}
@@ -27,7 +29,7 @@ const Nav = () => {
       <NavLinks toggle={toggle}>
         <Link
           className="firstLink"
-          to="/"
+          to="/about"
           onClick={() => setToggle((prevState) => !prevState)}
         >
           <span>OUR COMPANY</span>
@@ -57,6 +59,10 @@ const NavStyle = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5rem;
+
+  .logoContainer {
+    display: flex;
+  }
 `;
 
 const Logo = styled.img`

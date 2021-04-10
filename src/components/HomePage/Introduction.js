@@ -11,7 +11,7 @@ import { titleAnim, fade } from "../../animation";
 
 const Introduction = () => {
   const { scrollY } = useViewportScroll();
-  const phone_y = useTransform(scrollY, [0, 500], [350, 500]);
+  const phone_y = useTransform(scrollY, [300, 500], [350, 500]);
 
   return (
     <IntroductionStyle>

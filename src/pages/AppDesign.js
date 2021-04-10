@@ -90,7 +90,6 @@ const Projects = styled.div`
 
 const ViewProjects = styled.div`
   margin-top: 6rem;
-  margin-bottom: 18.5rem;
 `;
 
 export default WebDesign;

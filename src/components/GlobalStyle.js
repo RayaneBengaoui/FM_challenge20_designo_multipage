@@ -14,12 +14,14 @@ html{
 
 body{
     min-height:100vh;
+
     --burger-span: #1D1C1E;
     --footer-bg: #1D1C1E;
     --title-color: #ffffff;
     --button-bg: #ffffff;
     --button-text-color : #333136;
     --peach : #E7816B;
+    --beige : #FDF3F0;
 }
 
 h1{

@@ -53,8 +53,6 @@ const Locations = () => {
 const LocationsStyle = styled(motion.div)`
   min-height: 100vh;
 `;
-const Maps = styled(motion.div)`
-  margin-bottom: 18.5rem;
-`;
+const Maps = styled(motion.div)``;
 
 export default Locations;
