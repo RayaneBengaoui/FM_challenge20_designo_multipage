@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { pageAnimation } from "../animation";
 
 import Information from "../components/About/Information";
+import CityLocation from "../components/CityLocation";
 import ScrollTop from "../components/ScrollTop";
 
 import {
@@ -11,6 +12,10 @@ import {
   about_deal_images,
   about_talent_images,
 } from "../data";
+
+import illustration_australia from "../assets/shared/desktop/illustration-australia.svg";
+import illustration_canada from "../assets/shared/desktop/illustration-canada.svg";
+import illustration_united_kingdom from "../assets/shared/desktop/illustration-united-kingdom.svg";
 
 const About = () => {
   return (
@@ -41,6 +46,23 @@ const About = () => {
           "Our team is multi-disciplinary and we are not merely interested in form — content and meaning are just as important. We give great importance to craftsmanship, service, and prompt delivery. Clients have always been impressed with our high-quality outcomes that encapsulates their brand’s story and mission."
         }
       />
+      <CityLocations>
+        <CityLocation
+          illustration={illustration_canada}
+          title="canada"
+          circle_rotation="90deg"
+        />
+        <CityLocation
+          illustration={illustration_australia}
+          title="australia"
+          circle_rotation="0deg"
+        />
+        <CityLocation
+          illustration={illustration_united_kingdom}
+          title="united kingdom"
+          circle_rotation="-90deg"
+        />
+      </CityLocations>
       <Information
         images={about_deal_images}
         title={"The real deal"}
@@ -59,6 +81,11 @@ const About = () => {
 
 const AboutStyle = styled(motion.div)`
   min-height: 100vh;
+`;
+const CityLocations = styled(motion.div)`
+  min-height: 100vh;
+  padding: 0 1.5rem;
+  margin: 7.5rem 0;
 `;
 
 export default About;
