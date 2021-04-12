@@ -72,10 +72,27 @@ a{
     color:white;
 }
 
-input{
+input, textarea{
     background:none;
     border:none;
     outline:none;
+    font-family: inherit;
+    color:white;
+    border-bottom: solid 1px white;
+
+
+    ::placeholder {
+        color: white;
+        opacity:.5;
+    }   
+    :focus{
+        border-bottom: solid 3px white;
+
+        ::placeholder {
+
+        opacity:1;
+    } 
+    }
 }
 
 `;

@@ -29,14 +29,17 @@ const Form = () => {
           placeholder="Phone"
           required
         />
-        <input
+
+        {/* <input
           className="largeInput"
           type="text"
           name="message"
           id="message"
           placeholder="Your Message"
           required
-        />
+        /> */}
+
+        <textarea placeholder="Your Message" className="largeInput"></textarea>
         <motion.button
           whileHover={{
             scale: 1.1,
@@ -54,19 +57,39 @@ const Form = () => {
 
 const FormStyle = styled.div`
   background-color: var(--peach);
+  display: flex;
+  flex-direction: column;
+  padding: 4.5rem 1.5rem;
 `;
-const Header = styled.div``;
+const Header = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+  p {
+    color: white;
+    padding: 1.5rem 0;
+    max-width: 22rem;
+  }
+`;
 const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
 
   input {
     padding: 1rem 0;
-    border-bottom: solid 1px white;
   }
 
   .largeInput {
     padding-bottom: 5rem;
+    margin: 1rem 0;
+  }
+
+  button {
+    margin-top: 2.5rem;
+    align-self: center;
   }
 `;
 
