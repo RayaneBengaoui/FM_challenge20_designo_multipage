@@ -65,7 +65,8 @@ const FooterStyle = styled(motion.footer)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 18.5rem;
+  margin-top: ${(props) => (props.callAction ? "18.5rem" : "0rem")};
+  /* margin-top: 18.5rem; */
 `;
 
 const Navigation = styled.div`

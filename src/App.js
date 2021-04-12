@@ -1,5 +1,5 @@
-import { Switch, Route } from "react-router-dom";
-import { useState } from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 
 import GlobalStyle from "./components/GlobalStyle";
@@ -14,7 +14,14 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 function App() {
+  const location = useLocation();
   const [callAction, setCallAction] = useState(true);
+
+  useEffect(() => {
+    location.pathname === "/contact"
+      ? setCallAction(false)
+      : setCallAction(true);
+  }, [location.pathname]);
 
   return (
     <div className="App">
