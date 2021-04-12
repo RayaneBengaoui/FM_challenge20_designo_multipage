@@ -3,7 +3,10 @@ import styled from "styled-components";
 const Project = ({ title, description, image }) => {
   return (
     <ProjectStyle>
-      <Image src={image}></Image>
+      <ImageContainer>
+        <Image src={image}></Image>
+      </ImageContainer>
+
       <TextContainer>
         <h3>{title}</h3>
         <p>{description}</p>
@@ -25,15 +28,22 @@ const ProjectStyle = styled.div`
   margin-bottom: 2.5rem;
 `;
 
+const ImageContainer = styled.div`
+  overflow: hidden;
+`;
 const Image = styled.img`
   width: 100%;
   height: 320px;
   object-fit: cover;
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */
   cursor: pointer;
 
+  transition: transform 0.5s, filter 1s ease-in-out;
+  filter: grayscale(100%);
+
   &:hover {
-    width: 105%;
+    filter: grayscale(0);
+    transform: scale(1.05);
   }
 `;
 const TextContainer = styled.div`
