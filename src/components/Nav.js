@@ -42,7 +42,7 @@ const Nav = () => {
         </Link>
         <Link
           className="lastLink"
-          to=""
+          to="/contact"
           onClick={() => setToggle((prevState) => !prevState)}
         >
           <span> CONTACT</span>

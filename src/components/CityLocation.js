@@ -18,7 +18,6 @@ const CityLocation = ({ illustration, title, circle_rotation }) => {
       <TextContainer>
         <h3>{title}</h3>
         <motion.button
-          variants={fade}
           whileHover={{
             scale: 1.1,
             backgroundColor: "#FFAD9B",

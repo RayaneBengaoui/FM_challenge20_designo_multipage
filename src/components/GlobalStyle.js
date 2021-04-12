@@ -72,6 +72,12 @@ a{
     color:white;
 }
 
+input{
+    background:none;
+    border:none;
+    outline:none;
+}
+
 `;
 
 export default GlobalStyle;

@@ -11,6 +11,7 @@ import AppDesign from "./pages/AppDesign";
 import GraphicDesign from "./pages/GraphicDesign";
 import Locations from "./pages/Locations";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   const [callAction, setCallAction] = useState(true);
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/about" exact>
             <About />
+          </Route>
+          <Route path="/contact" exact>
+            <Contact />
           </Route>
         </Switch>
       </AnimatePresence>
