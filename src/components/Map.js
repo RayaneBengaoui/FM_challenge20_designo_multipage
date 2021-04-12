@@ -5,12 +5,15 @@ import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Icon } from "leaflet";
 
 const Map = ({ x, y, country, office, adress, contactP, contactM }) => {
+  const key = process.env.REACT_APP_MAPBOX_KEY;
+  const tileOpenMap = `https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=${key}`;
+
   return (
     <MapStyle>
       <MapContainer center={[x, y]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url={tileOpenMap}
         />
         <Marker
           icon={
