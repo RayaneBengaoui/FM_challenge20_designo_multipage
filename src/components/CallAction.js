@@ -56,6 +56,18 @@ const CallActionstyle = styled.div`
     color: white;
     max-width: 20rem;
   }
+
+  @media screen and (min-width: 700px) {
+    transform: translateY(-75%);
+    h1 {
+      font-size: 2.5rem;
+      max-width: 21rem;
+    }
+
+    p {
+      max-width: 28rem;
+    }
+  }
 `;
 
 export default CallAction;

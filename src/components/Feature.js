@@ -26,6 +26,13 @@ const FeatureStyle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 850px) {
+    margin: auto;
+    max-width: 45rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 const Illustration = styled.div`
   position: relative;
@@ -48,6 +55,16 @@ const TextContainer = styled.div`
   p {
     padding-top: 2rem;
     padding-bottom: 5rem;
+  }
+
+  @media screen and (min-width: 850px) {
+    max-width: 27.5rem;
+    text-align: left;
+
+    p {
+      padding-top: 1rem;
+      padding-bottom: 5rem;
+    }
   }
 `;
 

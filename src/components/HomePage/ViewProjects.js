@@ -32,9 +32,14 @@ const ViewProjects = () => {
 };
 
 const ViewProjectsStyle = styled(motion.section)`
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 0 1.5rem;
   padding-top: 5rem;
+
+  @media screen and (min-width: 700px) {
+    padding: 0 0rem;
+    padding-top: 5rem;
+  }
 `;
 
 export default ViewProjects;

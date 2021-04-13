@@ -33,12 +33,21 @@ const Features = () => {
 };
 
 const FeaturesStyle = styled(motion.section)`
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 0 1.5rem;
   padding-top: 5rem;
 
   :last-child {
     margin-bottom: 20rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    padding: 0 2.5rem;
+    padding-top: 5rem;
+
+    :last-child {
+      margin-bottom: 0rem;
+    }
   }
 `;
 

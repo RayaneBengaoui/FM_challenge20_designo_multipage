@@ -60,6 +60,10 @@ const NavStyle = styled.nav`
   align-items: center;
   padding: 0 1.5rem;
 
+  @media screen and (min-width: 700px) {
+    padding: 0 2.5rem;
+  }
+
   .logoContainer {
     display: flex;
   }
@@ -89,6 +93,10 @@ const Burger = styled.div`
         : "rotateZ(0deg) translateY(0%)"};
     background: ${(props) => (props.toggle ? `#E7816B` : "black")};
   }
+
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
 `;
 const Line = styled.span`
   background: var(--burger-span);
@@ -110,12 +118,28 @@ const NavLinks = styled.nav`
   flex-direction: column;
   transition: top 0.5s ease;
 
+  @media screen and (min-width: 700px) {
+    position: unset;
+    height: unset;
+    flex-direction: row;
+    top: unset;
+    left: unset;
+    background: unset;
+    width: unset;
+  }
+
   a {
     font-size: 1.5rem;
     letter-spacing: 2px;
     font-weight: 400;
     background: black;
     padding: 0rem 1rem;
+
+    @media screen and (min-width: 700px) {
+      background: unset;
+      color: black;
+      font-size: 14px;
+    }
 
     span {
       position: relative;
@@ -134,6 +158,11 @@ const NavLinks = styled.nav`
     transform-origin: 100% 50%;
     transform: scale3d(0, 1, 1);
     transition: transform 0.3s;
+
+    @media screen and (min-width: 700px) {
+      background: black;
+      height: 1px;
+    }
   }
 
   span:hover::before {
@@ -144,10 +173,20 @@ const NavLinks = styled.nav`
   .firstLink {
     padding-top: 2.5rem;
     padding-bottom: 2rem;
+
+    @media screen and (min-width: 700px) {
+      padding-top: unset;
+      padding-bottom: unset;
+    }
   }
   .lastLink {
     padding-top: 2rem;
     padding-bottom: 2.5rem;
+
+    @media screen and (min-width: 700px) {
+      padding-top: unset;
+      padding-bottom: unset;
+    }
   }
 `;
 

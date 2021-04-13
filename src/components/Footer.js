@@ -66,7 +66,12 @@ const FooterStyle = styled(motion.footer)`
   align-items: center;
   justify-content: center;
   margin-top: ${(props) => (props.callAction ? "18.5rem" : "0rem")};
-  /* margin-top: 18.5rem; */
+
+  @media screen and (min-width: 700px) {
+    padding: 0 2.5rem;
+    padding-top: ${(props) => (props.callAction ? "6rem" : "0rem")};
+    min-height: ${(props) => (props.callAction ? "423px" : "337px")};
+  }
 `;
 
 const Navigation = styled.div`
@@ -74,10 +79,20 @@ const Navigation = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  }
 `;
 const Logo = styled.img`
   max-width: 12.5rem;
   margin-bottom: 2.5rem;
+  @media screen and (min-width: 700px) {
+    margin-bottom: 0rem;
+  }
 `;
 const NavLinks = styled.div`
   width: 100%;
@@ -92,18 +107,56 @@ const NavLinks = styled.div`
 
   a {
     padding-top: 2rem;
+    position: relative;
+    transition: all 0.5s ease;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: white;
+    bottom: 0%;
+    left: 0;
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+  }
+
+  a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: unset;
+    margin-bottom: 0rem;
+    width: 370px;
+
+    a {
+      padding-top: 0rem;
+    }
   }
 `;
 const Contacts = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   max-width: 12rem;
+
+  @media screen and (min-width: 700px) {
+    margin-top: 2.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: unset;
+    width: 100%;
+  }
 `;
 const Adress = styled.p`
   text-align: center;
-
   color: white;
   opacity: 0.5;
   padding-bottom: 2.5rem;
@@ -111,15 +164,33 @@ const Adress = styled.p`
   span {
     font-weight: 500;
   }
+
+  @media screen and (min-width: 700px) {
+    max-width: 12rem;
+    padding-bottom: 0rem;
+  }
 `;
 const Socials = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (min-width: 700px) {
+    max-width: 11.5rem;
+  }
 `;
 const Social = styled.a`
   img {
+    transition: all 0.5s ease;
     width: 1.5rem;
+    cursor: pointer;
+    filter: invert(57%) sepia(51%) saturate(557%) hue-rotate(322deg)
+      brightness(98%) contrast(85%);
+    :hover {
+      filter: invert(64%) sepia(49%) saturate(361%) hue-rotate(320deg)
+        brightness(107%) contrast(101%);
+      transform: scale(1.2);
+    }
   }
 `;
 

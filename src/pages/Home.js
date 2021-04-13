@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import styled from "styled-components";
 
 import Introduction from "../components/HomePage/Introduction";
 import ViewProjects from "../components/HomePage/ViewProjects";
@@ -10,7 +11,7 @@ import { pageAnimation } from "../animation";
 
 const Home = () => {
   return (
-    <motion.div
+    <HomeStyle
       className="home"
       variants={pageAnimation}
       initial="hidden"
@@ -21,8 +22,14 @@ const Home = () => {
       <ViewProjects />
       <Features />
       <ScrollTop />
-    </motion.div>
+    </HomeStyle>
   );
 };
+
+const HomeStyle = styled(motion.div)`
+  @media screen and (min-width: 700px) {
+    padding: 0 2.5rem;
+  }
+`;
 
 export default Home;

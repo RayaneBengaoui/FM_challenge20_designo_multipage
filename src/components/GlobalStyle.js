@@ -29,6 +29,11 @@ h1{
     color: var(--title-color);
     font-weight:500;
     line-height: 2.25rem;
+
+    @media screen and (min-width: 700px) {
+        font-size: 3rem;
+        line-height: 3rem;
+  }
 }
 
 h2{
@@ -42,6 +47,11 @@ h3{
     text-transform: uppercase;
     letter-spacing: 5px;
     color: #333136;
+
+    @media screen and (min-width: 700px) {
+        font-size: 1.5rem;
+  
+  }
 }
 
 p{

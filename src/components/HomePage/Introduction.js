@@ -50,6 +50,10 @@ const IntroductionStyle = styled(motion.section)`
   background-color: var(--peach);
   overflow: hidden;
   padding: 0 2.5rem;
+
+  @media screen and (min-width: 700px) {
+    border-radius: 15px;
+  }
 `;
 
 const Presentation = styled.div`
@@ -59,6 +63,17 @@ const Presentation = styled.div`
   margin: auto;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 700px) {
+    max-width: 36rem;
+
+    p {
+      max-width: 26rem;
+    }
+  }
 
   p {
     color: white;
@@ -73,7 +88,13 @@ const BackgroundCircle = styled(motion.img)`
   width: 44rem;
   top: 5rem;
   right: -20rem;
-  transform: rotate(-45deg);
+  transform: rotate(-5deg);
+  transition: all 0.5s ease;
+
+  @media screen and (min-width: 700px) {
+    top: 8rem;
+    right: -15rem;
+  }
 `;
 
 const Phone = styled(motion.img)`

@@ -7,4 +7,5 @@ export const Layout = styled(motion.div)`
 
 export const Hide = styled.div`
   overflow: hidden;
+  padding: 0.6rem 0;
 `;
