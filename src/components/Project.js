@@ -26,6 +26,17 @@ const ProjectStyle = styled.div`
   max-width: 20.5rem;
   margin: auto;
   margin-bottom: 2.5rem;
+
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+    height: 310px;
+    max-width: 100%;
+  }
+  @media screen and (min-width: 1440px) {
+    flex-direction: column;
+    height: 478px;
+    max-width: 20.5rem;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -35,15 +46,18 @@ const Image = styled.img`
   width: 100%;
   height: 320px;
   object-fit: cover;
-  /* transition: all 0.5s ease; */
   cursor: pointer;
-
   transition: transform 0.5s, filter 1s ease-in-out;
   filter: grayscale(100%);
 
   &:hover {
     filter: grayscale(0);
     transform: scale(1.05);
+  }
+
+  @media screen and (min-width: 700px) {
+    width: 339px;
+    height: unset;
   }
 `;
 const TextContainer = styled.div`
@@ -61,6 +75,14 @@ const TextContainer = styled.div`
   p {
     text-align: center;
     max-width: 17rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    height: unset;
+    flex-basis: 58%;
+  }
+  @media screen and (min-width: 1440px) {
+    flex-basis: 33%;
   }
 `;
 

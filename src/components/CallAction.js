@@ -33,7 +33,6 @@ const CallActionstyle = styled.div`
   background-color: var(--peach);
   background-image: ${(props) => `url(${props.bg})`};
   background-size: cover;
-
   background-repeat: no-repeat;
   width: 90%;
   min-height: 380px;
@@ -50,6 +49,7 @@ const CallActionstyle = styled.div`
 
   h1 {
     max-width: 15rem;
+    margin: auto;
   }
 
   p {
@@ -80,6 +80,7 @@ const CallActionstyle = styled.div`
     h1 {
       font-size: 2.5rem;
       max-width: 21rem;
+      margin: unset;
     }
 
     p {

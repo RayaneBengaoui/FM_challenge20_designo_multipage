@@ -29,6 +29,18 @@ const IntroductionProjectStyle = styled.div`
     font-size: 15px;
     max-width: 21rem;
   }
+
+  @media screen and (min-width: 700px) {
+    padding: 0 2.5rem;
+    border-radius: 15px;
+    p {
+      max-width: 23rem;
+    }
+  }
+  @media screen and (min-width: 1250px) {
+    max-width: 1111px;
+    margin: auto;
+  }
 `;
 
 const Circle = styled.img`

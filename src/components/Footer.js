@@ -14,42 +14,44 @@ import icon_insta from "../assets/shared/desktop/icon-instagram.svg";
 const Footer = ({ callAction }) => {
   return (
     <FooterStyle callAction={callAction}>
-      {callAction && <CallAction />}
-      <Navigation>
-        <Logo src={logo_light} />
-        <NavLinks>
-          <Link to="">OUR COMPANY</Link>
-          <Link to="">LOCATIONS</Link>
-          <Link to="">CONTACT</Link>
-        </NavLinks>
-      </Navigation>
-      <Contacts>
-        <Adress>
-          <span>Designo Central Office</span> 3886 Wellington Street Toronto,
-          Ontario M9C 3J5
-        </Adress>
-        <Adress>
-          <span> Contact Us (Central Office)</span> P : +1 253-863-8967 M :
-          contact@designo.co
-        </Adress>
-        <Socials>
-          <Social>
-            <img src={icon_fb} alt="facebook" />
-          </Social>
-          <Social>
-            <img src={icon_yt} alt="youtube" />
-          </Social>
-          <Social>
-            <img src={icon_twitter} alt="twitter" />
-          </Social>
-          <Social>
-            <img src={icon_pint} alt="pinterest" />
-          </Social>
-          <Social>
-            <img src={icon_insta} alt="instagram" />
-          </Social>
-        </Socials>
-      </Contacts>
+      <FooterContent>
+        {callAction && <CallAction />}
+        <Navigation>
+          <Logo src={logo_light} />
+          <NavLinks>
+            <Link to="">OUR COMPANY</Link>
+            <Link to="">LOCATIONS</Link>
+            <Link to="">CONTACT</Link>
+          </NavLinks>
+        </Navigation>
+        <Contacts>
+          <Adress>
+            <span>Designo Central Office</span> 3886 Wellington Street Toronto,
+            Ontario M9C 3J5
+          </Adress>
+          <Adress>
+            <span> Contact Us (Central Office)</span> P : +1 253-863-8967 M :
+            contact@designo.co
+          </Adress>
+          <Socials>
+            <Social>
+              <img src={icon_fb} alt="facebook" />
+            </Social>
+            <Social>
+              <img src={icon_yt} alt="youtube" />
+            </Social>
+            <Social>
+              <img src={icon_twitter} alt="twitter" />
+            </Social>
+            <Social>
+              <img src={icon_pint} alt="pinterest" />
+            </Social>
+            <Social>
+              <img src={icon_insta} alt="instagram" />
+            </Social>
+          </Socials>
+        </Contacts>
+      </FooterContent>
     </FooterStyle>
   );
 };
@@ -59,18 +61,30 @@ const FooterStyle = styled(motion.footer)`
   min-height: ${(props) => (props.callAction ? "51rem" : "40rem")};
 
   padding: 0 1.5rem;
-  padding-top: ${(props) => (props.callAction ? "15rem" : "0rem")};
+  padding-top: ${(props) => (props.callAction ? "15rem" : "4rem")};
   background-color: var(--footer-bg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   margin-top: ${(props) => (props.callAction ? "18.5rem" : "0rem")};
 
   @media screen and (min-width: 700px) {
     padding: 0 2.5rem;
-    padding-top: ${(props) => (props.callAction ? "6rem" : "0rem")};
+    padding-top: ${(props) => (props.callAction ? "10rem" : "5rem")};
     min-height: ${(props) => (props.callAction ? "423px" : "337px")};
+  }
+  @media screen and (min-width: 1250px) {
+    min-height: ${(props) => (props.callAction ? "393px" : "337px")};
+  }
+`;
+
+const FooterContent = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 1250px) {
+    max-width: 1111px;
+    margin: auto;
   }
 `;
 
