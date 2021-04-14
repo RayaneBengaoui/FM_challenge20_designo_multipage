@@ -33,7 +33,15 @@ const FeatureStyle = styled.div`
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media screen and (min-width: 1250px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 30%;
+  }
 `;
+
 const Illustration = styled.div`
   position: relative;
 
@@ -65,6 +73,11 @@ const TextContainer = styled.div`
       padding-top: 1rem;
       padding-bottom: 5rem;
     }
+  }
+
+  @media screen and (min-width: 1250px) {
+    max-width: 34rem;
+    text-align: center;
   }
 `;
 

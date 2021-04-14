@@ -3,20 +3,29 @@ import { Link } from "react-router-dom";
 
 import icon_right_arrow from "../assets/shared/desktop/icon-right-arrow.svg";
 
-const ViewProject = ({ title, images, linkPath }) => {
+const ViewProject = ({ title, images, linkPath, row, column }) => {
   return (
-    <Link to={linkPath}>
-      <ViewProjectStyle images={images}>
-        <HoverBg className="hoverBg" />
-        <h1>{title}</h1>
-        <LinkContainer>
-          <p>View Projects</p>
-          <Arrow className="arrow" src={icon_right_arrow} />
-        </LinkContainer>
-      </ViewProjectStyle>
-    </Link>
+    <ViewProjectContainer row={row} column={column}>
+      <Link to={linkPath}>
+        <ViewProjectStyle className="projectStyle" images={images}>
+          <HoverBg className="hoverBg" />
+          <h1>{title}</h1>
+          <LinkContainer>
+            <p>View Projects</p>
+            <Arrow className="arrow" src={icon_right_arrow} />
+          </LinkContainer>
+        </ViewProjectStyle>
+      </Link>
+    </ViewProjectContainer>
   );
 };
+
+const ViewProjectContainer = styled.div`
+  @media screen and (min-width: 1250px) {
+    grid-row: ${(props) => props.row};
+    grid-column: ${(props) => props.column};
+  }
+`;
 
 const ViewProjectStyle = styled.div`
   position: relative;
@@ -64,9 +73,15 @@ const ViewProjectStyle = styled.div`
       letter-spacing: 2px;
     }
   }
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1250px) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${(props) => props.images.desktop});
+
+    max-height: 100%;
+    height: 100%;
+
+    /* display: unset; */
+    margin-top: 0rem;
   }
 `;
 

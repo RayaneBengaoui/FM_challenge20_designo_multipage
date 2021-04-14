@@ -49,6 +49,15 @@ const FeaturesStyle = styled(motion.section)`
       margin-bottom: 0rem;
     }
   }
+
+  @media screen and (min-width: 1250px) {
+    padding: 0 0;
+    padding-top: 5rem;
+    max-width: 1111px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 export default Features;

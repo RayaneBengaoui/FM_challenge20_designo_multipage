@@ -54,6 +54,16 @@ const IntroductionStyle = styled(motion.section)`
   @media screen and (min-width: 700px) {
     border-radius: 15px;
   }
+
+  @media screen and (min-width: 1250px) {
+    max-width: 1111px;
+    margin: auto;
+    min-height: 40rem;
+
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 6rem;
+  }
 `;
 
 const Presentation = styled.div`
@@ -67,6 +77,13 @@ const Presentation = styled.div`
   flex-direction: column;
   align-items: center;
 
+  p {
+    color: white;
+
+    padding: 1.5rem 0rem;
+    font-size: 15px;
+  }
+
   @media screen and (min-width: 700px) {
     max-width: 36rem;
 
@@ -75,11 +92,16 @@ const Presentation = styled.div`
     }
   }
 
-  p {
-    color: white;
+  @media screen and (min-width: 1250px) {
+    padding-top: 0rem;
+    margin: unset;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
 
-    padding: 1.5rem 0rem;
-    font-size: 15px;
+    p {
+      padding: 3rem 0rem;
+    }
   }
 `;
 
@@ -95,6 +117,12 @@ const BackgroundCircle = styled(motion.img)`
     top: 8rem;
     right: -15rem;
   }
+
+  @media screen and (min-width: 1250px) {
+    width: 40rem;
+    top: 0rem;
+    right: 0rem;
+  }
 `;
 
 const Phone = styled(motion.img)`
@@ -102,7 +130,12 @@ const Phone = styled(motion.img)`
   left: 50%;
   bottom: -1.5rem;
   max-width: 150%;
-  /* transform: translate(-50%, 38%); */
+  transition: all 0.5s ease;
+
+  @media screen and (min-width: 1250px) {
+    left: 79%;
+    bottom: 15%;
+  }
 `;
 
 export default Introduction;

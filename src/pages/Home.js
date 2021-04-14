@@ -30,6 +30,9 @@ const HomeStyle = styled(motion.div)`
   @media screen and (min-width: 700px) {
     padding: 0 2.5rem;
   }
+  @media screen and (min-width: 1250px) {
+    padding: 0 10.25rem;
+  }
 `;
 
 export default Home;

@@ -13,59 +13,69 @@ const Nav = () => {
       : (document.body.style.overflow = "auto");
   }, [toggle]);
 
+  const toggleHandler = () => {
+    if (window.innerWidth >= 700) {
+    } else {
+      setToggle((prevState) => !prevState);
+    }
+  };
+
   return (
     <NavStyle>
-      <Link className="logoContainer" to="">
-        <Logo src={logo_dark} />
-      </Link>
-      <Burger
-        toggle={toggle}
-        onClick={() => setToggle((prevState) => !prevState)}
-      >
-        <Line className="line1" />
-        <Line className="line2" />
-        <Line className="line3" />
-      </Burger>
-      <NavLinks toggle={toggle}>
-        <Link
-          className="firstLink"
-          to="/about"
+      <NavContainer>
+        <Link className="logoContainer" to="">
+          <Logo src={logo_dark} />
+        </Link>
+        <Burger
+          toggle={toggle}
           onClick={() => setToggle((prevState) => !prevState)}
         >
-          <span>OUR COMPANY</span>
-        </Link>
-        <Link
-          to="/locations"
-          onClick={() => setToggle((prevState) => !prevState)}
-        >
-          <span>LOCATIONS</span>
-        </Link>
-        <Link
-          className="lastLink"
-          to="/contact"
-          onClick={() => setToggle((prevState) => !prevState)}
-        >
-          <span> CONTACT</span>
-        </Link>
-      </NavLinks>
+          <Line className="line1" />
+          <Line className="line2" />
+          <Line className="line3" />
+        </Burger>
+        <NavLinks toggle={toggle}>
+          <Link className="firstLink" to="/about" onClick={toggleHandler}>
+            <span>OUR COMPANY</span>
+          </Link>
+          <Link to="/locations" onClick={toggleHandler}>
+            <span>LOCATIONS</span>
+          </Link>
+          <Link className="lastLink" to="/contact" onClick={toggleHandler}>
+            <span> CONTACT</span>
+          </Link>
+        </NavLinks>
+      </NavContainer>
     </NavStyle>
   );
 };
 
 const NavStyle = styled.nav`
-  min-height: 6rem;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 6rem;
   padding: 0 1.5rem;
 
   @media screen and (min-width: 700px) {
+    height: 155px;
     padding: 0 2.5rem;
+  }
+
+  @media screen and (min-width: 1250px) {
+    padding: 0 10.25rem;
   }
 
   .logoContainer {
     display: flex;
+  }
+`;
+const NavContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+
+  align-items: center;
+  @media screen and (min-width: 1250px) {
+    max-width: 1111px;
+    margin: auto;
   }
 `;
 

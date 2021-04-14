@@ -16,6 +16,8 @@ const ViewProjects = () => {
         title="web design"
         images={web_design_images}
         linkPath="/webdesign/"
+        row="1/3"
+        column="1"
       />
       <ViewProject
         title="app design"
@@ -39,6 +41,15 @@ const ViewProjectsStyle = styled(motion.section)`
   @media screen and (min-width: 700px) {
     padding: 0 0rem;
     padding-top: 5rem;
+  }
+  @media screen and (min-width: 1250px) {
+    max-width: 1111px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    min-height: 640px;
   }
 `;
 
