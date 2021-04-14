@@ -8,11 +8,13 @@ import { motion } from "framer-motion";
 const CallAction = () => {
   return (
     <CallActionstyle bg={bg_circle}>
-      <h1>Let’s talk about your project</h1>
-      <p>
-        Ready to take it to the next level? Contact us today and find out how
-        our expertise can help your business grow.
-      </p>
+      <div>
+        <h1>Let’s talk about your project</h1>
+        <p>
+          Ready to take it to the next level? Contact us today and find out how
+          our expertise can help your business grow.
+        </p>
+      </div>
       <motion.button
         whileHover={{
           scale: 1.1,
@@ -59,6 +61,22 @@ const CallActionstyle = styled.div`
 
   @media screen and (min-width: 700px) {
     transform: translateY(-75%);
+    h1 {
+      font-size: 2.5rem;
+      max-width: 21rem;
+    }
+
+    p {
+      max-width: 28rem;
+    }
+  }
+  @media screen and (min-width: 1250px) {
+    max-width: 1111px;
+    min-height: 292px;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 6rem;
     h1 {
       font-size: 2.5rem;
       max-width: 21rem;
