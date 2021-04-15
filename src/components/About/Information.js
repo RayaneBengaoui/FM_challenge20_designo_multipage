@@ -4,9 +4,16 @@ import { motion } from "framer-motion";
 import three_circle_bg from "../../assets/shared/desktop/bg-pattern-three-circles.svg";
 import one_circle_bg from "../../assets/about/desktop/bg-pattern-hero-about-desktop.svg";
 
-const Information = ({ images, title, description, theme, doubletext }) => {
+const Information = ({
+  images,
+  title,
+  description,
+  theme,
+  doubletext,
+  flexDir,
+}) => {
   return (
-    <InformationStyle>
+    <InformationStyle theme={theme} flexDir={flexDir}>
       <Image images={images} />
       <TextContainer theme={theme}>
         <h2>{title}</h2>
@@ -20,6 +27,19 @@ const Information = ({ images, title, description, theme, doubletext }) => {
 
 const InformationStyle = styled(motion.section)`
   min-height: 44rem;
+
+  @media screen and (min-width: 700px) {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  @media screen and (min-width: 1250px) {
+    max-width: 1111px;
+    margin: auto;
+    display: flex;
+    min-height: ${(props) => (props.theme === "dark" ? "480px" : "640px")};
+    flex-direction: ${(props) =>
+      props.flexDir === "row" ? "row" : "row-reverse"};
+  }
 `;
 const Image = styled.div`
   height: 320px;
@@ -31,8 +51,11 @@ const Image = styled.div`
   @media screen and (min-width: 700px) {
     background-image: url(${(props) => props.images.tablet});
   }
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1250px) {
     background-image: url(${(props) => props.images.desktop});
+    height: unset;
+    width: unset;
+    flex-basis: 40%;
   }
 `;
 const TextContainer = styled.div`
@@ -51,15 +74,32 @@ const TextContainer = styled.div`
   align-items: center;
   padding: 5rem 0;
 
+  h2 {
+    @media screen and (min-width: 1250px) {
+      text-align: left;
+      width: 100%;
+      max-width: 30rem;
+    }
+  }
+
   p {
     color: ${(props) => (props.theme === "dark" ? "white" : "black")};
     max-width: 21rem;
     text-align: center;
     padding-top: 1.5rem;
+
+    @media screen and (min-width: 1250px) {
+      max-width: 30rem;
+      text-align: left;
+    }
   }
 
   .secondParagraph {
     padding-top: 1rem;
+  }
+
+  @media screen and (min-width: 1250px) {
+    flex-basis: 60%;
   }
 `;
 

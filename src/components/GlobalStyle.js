@@ -39,6 +39,10 @@ h1{
 h2{
     font-size : 2rem;
     font-weight:500;
+
+    @media screen and (min-width: 700px) {
+        font-size: 3rem;
+  }
 }
 
 h3{
@@ -50,7 +54,6 @@ h3{
 
     @media screen and (min-width: 700px) {
         font-size: 1.5rem;
-  
   }
 }
 
