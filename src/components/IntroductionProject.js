@@ -40,6 +40,7 @@ const IntroductionProjectStyle = styled.div`
   @media screen and (min-width: 1250px) {
     max-width: 1111px;
     margin: auto;
+    margin-bottom: 6rem;
   }
 `;
 

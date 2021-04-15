@@ -47,17 +47,18 @@ const Image = styled.img`
   height: 320px;
   object-fit: cover;
   cursor: pointer;
-  transition: transform 0.5s, filter 1s ease-in-out;
-  filter: grayscale(100%);
+  transition: transform 0.5s, filter 0.5s ease-in-out;
 
   &:hover {
-    filter: grayscale(0);
-    transform: scale(1.05);
+    filter: invert(100%);
+    transform: scale(1.2) rotate(10deg);
   }
 
   @media screen and (min-width: 700px) {
     width: 339px;
     height: unset;
+  }
+  @media screen and (min-width: 1440px) {
   }
 `;
 const TextContainer = styled.div`
@@ -82,7 +83,7 @@ const TextContainer = styled.div`
     flex-basis: 58%;
   }
   @media screen and (min-width: 1440px) {
-    flex-basis: 33%;
+    flex-basis: 36%;
   }
 `;
 

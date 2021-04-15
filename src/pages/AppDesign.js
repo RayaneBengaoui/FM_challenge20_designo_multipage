@@ -17,7 +17,7 @@ import image_todo from "../assets/app-design/desktop/image-todo.jpg";
 
 const WebDesign = () => {
   return (
-    <motion.div
+    <AppDesignStyle
       className="home"
       variants={pageAnimation}
       initial="hidden"
@@ -64,32 +64,67 @@ const WebDesign = () => {
           description={"A VR experience app made for Loopstudios"}
           image={image_loopstudios}
         />
-
-        <ViewProjects>
-          <ViewProject
-            title="web design"
-            images={web_design_images}
-            linkPath="/webdesign/"
-          />
-          <ViewProject
-            title="graphic design"
-            images={graphic_design_images}
-            linkPath="/graphicdesign/"
-          />
-        </ViewProjects>
       </Projects>
+      <ViewProjects>
+        <ViewProject
+          title="web design"
+          images={web_design_images}
+          linkPath="/webdesign/"
+        />
+        <ViewProject
+          title="graphic design"
+          images={graphic_design_images}
+          linkPath="/graphicdesign/"
+        />
+      </ViewProjects>
+
       <ScrollTop />
-    </motion.div>
+    </AppDesignStyle>
   );
 };
+
+const AppDesignStyle = styled(motion.div)`
+  @media screen and (min-width: 700px) {
+    padding: 0 2.5rem;
+  }
+  @media screen and (min-width: 1250px) {
+    padding: 0 10.25rem;
+  }
+`;
 
 const Projects = styled.div`
   min-height: 100vh;
   padding: 0 1.5rem;
+
+  @media screen and (min-width: 700px) {
+    padding: 0;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+  }
 `;
 
 const ViewProjects = styled.div`
   margin-top: 6rem;
+  padding: 0 1.5rem;
+  @media screen and (min-width: 700px) {
+    margin-bottom: 24rem;
+    padding: 0 0;
+  }
+  @media screen and (min-width: 1250px) {
+    max-width: 1111px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 318px;
+    gap: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 27rem;
+  }
 `;
 
 export default WebDesign;

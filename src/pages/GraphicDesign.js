@@ -15,7 +15,7 @@ import image_science from "../assets/graphic-design/desktop/image-science.jpg";
 
 const GraphicDesign = () => {
   return (
-    <motion.div
+    <GraphicDesignStyle
       className="home"
       variants={pageAnimation}
       initial="hidden"
@@ -47,31 +47,68 @@ const GraphicDesign = () => {
           }
           image={image_science}
         />
-        <ViewProjects>
-          <ViewProject
-            title="app design"
-            images={app_design_images}
-            linkPath="/appdesign/"
-          />
-          <ViewProject
-            title="web design"
-            images={web_design_images}
-            linkPath="/webdesign/"
-          />
-        </ViewProjects>
       </Projects>
+      <ViewProjects>
+        <ViewProject
+          title="app design"
+          images={app_design_images}
+          linkPath="/appdesign/"
+        />
+        <ViewProject
+          title="web design"
+          images={web_design_images}
+          linkPath="/webdesign/"
+        />
+      </ViewProjects>
+
       <ScrollTop />
-    </motion.div>
+    </GraphicDesignStyle>
   );
 };
+
+const GraphicDesignStyle = styled(motion.div)`
+  @media screen and (min-width: 700px) {
+    padding: 0 2.5rem;
+  }
+  @media screen and (min-width: 1250px) {
+    padding: 0 10.25rem;
+  }
+`;
 
 const Projects = styled.div`
   min-height: 100vh;
   padding: 0 1.5rem;
+
+  @media screen and (min-width: 700px) {
+    padding: 0;
+  }
+  @media screen and (min-width: 1440px) {
+    min-height: 50vh;
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+  }
 `;
 
 const ViewProjects = styled.div`
   margin-top: 6rem;
+  padding: 0 1.5rem;
+  @media screen and (min-width: 700px) {
+    margin-bottom: 24rem;
+    padding: 0 0;
+  }
+  @media screen and (min-width: 1250px) {
+    max-width: 1111px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 318px;
+    gap: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 27rem;
+  }
 `;
 
 export default GraphicDesign;

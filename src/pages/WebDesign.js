@@ -120,7 +120,9 @@ const Projects = styled.div`
 
 const ViewProjects = styled.div`
   margin-top: 6rem;
+  padding: 0 1.5rem;
   @media screen and (min-width: 700px) {
+    padding: 0 0rem;
     margin-bottom: 24rem;
   }
   @media screen and (min-width: 1250px) {

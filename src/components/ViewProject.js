@@ -79,8 +79,6 @@ const ViewProjectStyle = styled.div`
 
     max-height: 100%;
     height: 100%;
-
-    /* display: unset; */
     margin-top: 0rem;
   }
 `;
