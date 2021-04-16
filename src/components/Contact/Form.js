@@ -29,16 +29,6 @@ const Form = () => {
           placeholder="Phone"
           required
         />
-
-        {/* <input
-          className="largeInput"
-          type="text"
-          name="message"
-          id="message"
-          placeholder="Your Message"
-          required
-        /> */}
-
         <textarea placeholder="Your Message" className="largeInput"></textarea>
         <motion.button
           whileHover={{
@@ -60,6 +50,18 @@ const FormStyle = styled.div`
   display: flex;
   flex-direction: column;
   padding: 4.5rem 1.5rem;
+
+  @media screen and (min-width: 700px) {
+    border-radius: 15px;
+    padding: 4.5rem 3.75rem;
+  }
+  @media screen and (min-width: 1250px) {
+    max-width: 1111px;
+    margin: auto;
+    flex-direction: row;
+    max-height: 480px;
+    padding: 3.5rem 3.75rem;
+  }
 `;
 const Header = styled.div`
   display: flex;
@@ -72,6 +74,29 @@ const Header = styled.div`
     color: white;
     padding: 1.5rem 0;
     max-width: 22rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    text-align: left;
+    align-items: flex-start;
+
+    h2 {
+      width: 100%;
+    }
+    p {
+      width: 100%;
+      max-width: 35rem;
+    }
+  }
+  @media screen and (min-width: 1250px) {
+    justify-content: center;
+    flex-basis: 50%;
+
+    padding: 0 2.5rem;
+
+    p {
+      max-width: 445px;
+    }
   }
 `;
 const FormContainer = styled.form`
@@ -90,6 +115,20 @@ const FormContainer = styled.form`
   button {
     margin-top: 2.5rem;
     align-self: center;
+  }
+
+  @media screen and (min-width: 700px) {
+    button {
+      align-self: flex-end;
+    }
+  }
+
+  @media screen and (min-width: 1250px) {
+    flex-basis: 50%;
+    padding: 0 2.5rem;
+    button {
+      margin-top: 0;
+    }
   }
 `;
 
