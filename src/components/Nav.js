@@ -136,6 +136,8 @@ const NavLinks = styled.nav`
     left: unset;
     background: unset;
     width: unset;
+    min-width: 370px;
+    justify-content: space-between;
   }
 
   a {
@@ -149,6 +151,7 @@ const NavLinks = styled.nav`
       background: unset;
       color: black;
       font-size: 14px;
+      padding: 0 0;
     }
 
     span {

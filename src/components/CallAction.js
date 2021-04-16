@@ -75,6 +75,7 @@ const CallActionstyle = styled.div`
     min-height: 292px;
     flex-direction: row;
     justify-content: space-between;
+
     text-align: left;
     padding: 0 6rem;
     h1 {
@@ -85,6 +86,7 @@ const CallActionstyle = styled.div`
 
     p {
       max-width: 28rem;
+      padding-bottom: 0rem;
     }
   }
 `;

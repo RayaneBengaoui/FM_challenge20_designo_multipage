@@ -34,6 +34,7 @@ const Locations = () => {
           adress={"19 Balonne Street New South Wales 2443"}
           contactP={"P : (02) 6720 9092"}
           contactM={"M : contact@designo.au"}
+          flexDir="reverse"
         />
         <Map
           x={51.7}
@@ -52,6 +53,14 @@ const Locations = () => {
 
 const LocationsStyle = styled(motion.div)`
   min-height: 100vh;
+
+  @media screen and (min-width: 700px) {
+    padding: 0 2.5rem;
+  }
+
+  @media screen and (min-width: 1250px) {
+    padding: 0 10.25rem;
+  }
 `;
 const Maps = styled(motion.div)``;
 

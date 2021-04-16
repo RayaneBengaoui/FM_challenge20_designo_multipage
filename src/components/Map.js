@@ -4,12 +4,21 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Icon } from "leaflet";
 
-const Map = ({ x, y, country, office, adress, contactP, contactM }) => {
+const Map = ({
+  x,
+  y,
+  country,
+  office,
+  adress,
+  contactP,
+  contactM,
+  flexDir,
+}) => {
   const key = process.env.REACT_APP_MAPBOX_KEY;
   const tileOpenMap = `https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=${key}`;
 
   return (
-    <MapStyle>
+    <MapStyle flexDir={flexDir}>
       <MapContainer center={[x, y]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -27,12 +36,14 @@ const Map = ({ x, y, country, office, adress, contactP, contactM }) => {
         ></Marker>
       </MapContainer>
       <MapInformation>
-        <h2>{country}</h2>
-        <TextContainer className="adressText">
-          <p className="bold">{office}</p>
-          <p>{adress}</p>
-        </TextContainer>
-        <TextContainer>
+        <div>
+          <h2>{country}</h2>
+          <TextContainer className="adressText">
+            <p className="bold">{office}</p>
+            <p>{adress}</p>
+          </TextContainer>
+        </div>
+        <TextContainer className="contactText">
           <p className="bold">Contact</p>
           <p>{contactP}</p>
           <p>{contactM}</p>
@@ -52,6 +63,26 @@ const MapStyle = styled.div`
     width: 100%;
     height: 20rem;
   }
+
+  @media screen and (min-width: 700px) {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  @media screen and (min-width: 1250px) {
+    max-width: 1111px;
+    margin: auto;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: ${(props) =>
+      props.flexDir === "reverse" ? "row-reverse" : "row"};
+    justify-content: space-between;
+    max-height: 326px;
+
+    .leaflet-container {
+      border-radius: 15px;
+      flex-basis: 35%;
+    }
+  }
 `;
 
 const MapInformation = styled.div`
@@ -65,6 +96,7 @@ const MapInformation = styled.div`
 
   h2 {
     color: #e7816b;
+    text-align: center;
   }
 
   p {
@@ -83,6 +115,36 @@ const MapInformation = styled.div`
   .leaflet-container {
     width: 100%;
     height: 50vh;
+  }
+
+  @media screen and (min-width: 700px) {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 2rem;
+    flex-direction: row;
+
+    p {
+      text-align: left;
+    }
+
+    h2 {
+      text-align: left;
+    }
+    .contactText {
+      height: 147px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-left: 6rem;
+    }
+  }
+
+  @media screen and (min-width: 1250px) {
+    margin-top: unset;
+    flex-basis: 62%;
+    border-radius: 15px;
+    overflow: hidden;
+    min-height: unset;
   }
 `;
 
