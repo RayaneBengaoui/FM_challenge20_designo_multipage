@@ -26,17 +26,19 @@ const Introduction = () => {
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
         </motion.p>
-        <motion.button
-          variants={fade}
-          whileHover={{
-            scale: 1.1,
-            backgroundColor: "#FFAD9B",
-            color: "white",
-          }}
-          whileTap={{ scale: 0.9 }}
-        >
-          Learn More
-        </motion.button>
+        <Link to="/about">
+          <motion.button
+            variants={fade}
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#FFAD9B",
+              color: "white",
+            }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Learn More
+          </motion.button>
+        </Link>
       </Presentation>
       <BackgroundCircle src={background_circle} />
       <Phone src={phone} style={{ y: phone_y, translateX: "-50%" }} />

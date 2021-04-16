@@ -15,16 +15,18 @@ const CallAction = () => {
           our expertise can help your business grow.
         </p>
       </div>
-      <motion.button
-        whileHover={{
-          scale: 1.1,
-          backgroundColor: "#FFAD9B",
-          color: "white",
-        }}
-        whileTap={{ scale: 0.9 }}
-      >
-        Get in touch
-      </motion.button>
+      <Link to="/contact">
+        <motion.button
+          whileHover={{
+            scale: 1.1,
+            backgroundColor: "#FFAD9B",
+            color: "white",
+          }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Get in touch
+        </motion.button>
+      </Link>
     </CallActionstyle>
   );
 };

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { fade } from "../animation";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import image_small_circle from "../assets/shared/desktop/bg-pattern-small-circle.svg";
 
@@ -17,16 +18,18 @@ const CityLocation = ({ illustration, title, circle_rotation }) => {
       </Illustration>
       <TextContainer>
         <h3>{title}</h3>
-        <motion.button
-          whileHover={{
-            scale: 1.1,
-            backgroundColor: "#FFAD9B",
-            color: "white",
-          }}
-          whileTap={{ scale: 0.9 }}
-        >
-          Learn More
-        </motion.button>
+        <Link to="/locations">
+          <motion.button
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#FFAD9B",
+              color: "white",
+            }}
+            whileTap={{ scale: 0.9 }}
+          >
+            See Location
+          </motion.button>
+        </Link>
       </TextContainer>
     </CityLocationStyle>
   );
