@@ -2,16 +2,22 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import { useWindowSize } from "./WindowSize";
+
 import logo_dark from "../assets/shared/desktop/logo-dark.png";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
-
+  const size = useWindowSize();
   useEffect(() => {
     toggle
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "auto");
-  }, [toggle]);
+
+    if (size.width > 700) {
+      document.body.style.overflow = "auto";
+    }
+  }, [toggle, size.width]);
 
   const toggleHandler = () => {
     if (window.innerWidth >= 700) {

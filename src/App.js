@@ -1,6 +1,7 @@
 import { Switch, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import styled from "styled-components";
 
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
@@ -24,7 +25,7 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className="App">
+    <AppStyle className="App">
       <GlobalStyle />
       <Nav />
       <AnimatePresence exitBeforeEnter>
@@ -53,8 +54,16 @@ function App() {
         </Switch>
       </AnimatePresence>
       <Footer callAction={callAction} />
-    </div>
+    </AppStyle>
   );
 }
+
+const AppStyle = styled.div`
+  @media screen and (min-width: 700px) {
+    body {
+      overflow: auto;
+    }
+  }
+`;
 
 export default App;
