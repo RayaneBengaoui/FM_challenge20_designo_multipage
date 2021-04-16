@@ -9,9 +9,12 @@ import {
   graphic_design_images,
 } from "../../data";
 
+import leaf_bg from "../../assets/shared/desktop/bg-pattern-leaf.svg";
+
 const ViewProjects = () => {
   return (
     <ViewProjectsStyle>
+      <BgLeaf src={leaf_bg} />
       <ViewProject
         title="web design"
         images={web_design_images}
@@ -50,6 +53,19 @@ const ViewProjectsStyle = styled(motion.section)`
     grid-template-rows: 1fr 1fr;
     gap: 1.5rem;
     min-height: 640px;
+    position: relative;
+    margin: 5rem auto;
+  }
+`;
+
+const BgLeaf = styled.img`
+  position: absolute;
+  display: none;
+  @media screen and (min-width: 1250px) {
+    z-index: -1;
+    display: unset;
+    top: -55%;
+    left: -15%;
   }
 `;
 

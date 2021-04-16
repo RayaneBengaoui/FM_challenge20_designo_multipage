@@ -15,6 +15,7 @@ import image_photon from "../assets/web-design/desktop/image-photon.jpg";
 import image_builder from "../assets/web-design/desktop/image-builder.jpg";
 import image_blogr from "../assets/web-design/desktop/image-blogr.jpg";
 import image_camp from "../assets/web-design/desktop/image-camp.jpg";
+import leaf_bg from "../assets/shared/desktop/bg-pattern-leaf.svg";
 
 const WebDesign = () => {
   return (
@@ -32,6 +33,7 @@ const WebDesign = () => {
         }
       />
       <Projects>
+        <BgLeaf src={leaf_bg} />
         <Project
           title={"express"}
           description={
@@ -115,6 +117,7 @@ const Projects = styled.div`
     justify-content: flex-start;
     flex-wrap: wrap;
     margin-top: 10rem;
+    position: relative;
   }
 `;
 
@@ -134,6 +137,17 @@ const ViewProjects = styled.div`
     gap: 2rem;
     margin-top: 10rem;
     margin-bottom: 27rem;
+  }
+`;
+
+const BgLeaf = styled.img`
+  position: absolute;
+  display: none;
+  @media screen and (min-width: 1440px) {
+    z-index: -1;
+    display: unset;
+    top: -29%;
+    left: -15%;
   }
 `;
 

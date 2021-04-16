@@ -77,6 +77,8 @@ const CallActionstyle = styled.div`
     min-height: 292px;
     flex-direction: row;
     justify-content: space-between;
+    background-size: 75%;
+    background-position: 100% 50%;
 
     text-align: left;
     padding: 0 6rem;

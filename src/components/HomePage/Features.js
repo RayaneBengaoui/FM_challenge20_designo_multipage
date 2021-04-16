@@ -6,10 +6,12 @@ import Feature from "../Feature";
 import illustration_passionate from "../../assets/home/desktop/illustration-passionate.svg";
 import illustration_resourceful from "../../assets/home/desktop/illustration-resourceful.svg";
 import illustration_friendly from "../../assets/home/desktop/illustration-friendly.svg";
+import leaf_bg from "../../assets/shared/desktop/bg-pattern-leaf.svg";
 
 const Features = () => {
   return (
     <FeaturesStyle>
+      <BgLeaf src={leaf_bg} />
       <Feature
         illustration={illustration_passionate}
         title="Passionate"
@@ -57,6 +59,19 @@ const FeaturesStyle = styled(motion.section)`
     margin: auto;
     display: flex;
     justify-content: space-between;
+    position: relative;
+  }
+`;
+
+const BgLeaf = styled.img`
+  position: absolute;
+  display: none;
+  transform: rotate(180deg);
+  @media screen and (min-width: 1250px) {
+    z-index: -1;
+    display: unset;
+    bottom: -40%;
+    right: -15%;
   }
 `;
 

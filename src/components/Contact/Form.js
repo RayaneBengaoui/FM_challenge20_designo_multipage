@@ -13,7 +13,7 @@ const Form = () => {
           drop us a line.
         </p>
       </Header>
-      <FormContainer action="">
+      <FormContainer onSubmit="return false;">
         <input type="text" name="name" id="name" placeholder="Name" required />
         <input
           type="email"
@@ -59,7 +59,7 @@ const FormStyle = styled.div`
     max-width: 1111px;
     margin: auto;
     flex-direction: row;
-    max-height: 480px;
+    max-height: 475px;
     padding: 3.5rem 3.75rem;
   }
 `;

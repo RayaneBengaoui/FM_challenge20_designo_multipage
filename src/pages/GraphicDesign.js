@@ -12,6 +12,7 @@ import { web_design_images, app_design_images } from "../data";
 import image_change from "../assets/graphic-design/desktop/image-change.jpg";
 import image_boxed_water from "../assets/graphic-design/desktop/image-boxed-water.jpg";
 import image_science from "../assets/graphic-design/desktop/image-science.jpg";
+import leaf_bg from "../assets/shared/desktop/bg-pattern-leaf.svg";
 
 const GraphicDesign = () => {
   return (
@@ -29,6 +30,7 @@ const GraphicDesign = () => {
         }
       />
       <Projects>
+        <BgLeaf src={leaf_bg} />
         <Project
           title={"tim brown"}
           description={`A book cover designed for 
@@ -89,6 +91,7 @@ const Projects = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin-top: 10rem;
+    position: relative;
   }
 `;
 
@@ -108,6 +111,17 @@ const ViewProjects = styled.div`
     gap: 2rem;
     margin-top: 10rem;
     margin-bottom: 27rem;
+  }
+`;
+
+const BgLeaf = styled.img`
+  position: absolute;
+  display: none;
+  @media screen and (min-width: 1440px) {
+    z-index: -1;
+    display: unset;
+    top: -60%;
+    left: -15%;
   }
 `;
 

@@ -14,6 +14,7 @@ import image_eyecam from "../assets/app-design/desktop/image-eyecam.jpg";
 import image_faceit from "../assets/app-design/desktop/image-faceit.jpg";
 import image_loopstudios from "../assets/app-design/desktop/image-loopstudios.jpg";
 import image_todo from "../assets/app-design/desktop/image-todo.jpg";
+import leaf_bg from "../assets/shared/desktop/bg-pattern-leaf.svg";
 
 const WebDesign = () => {
   return (
@@ -31,6 +32,7 @@ const WebDesign = () => {
         }
       />
       <Projects>
+        <BgLeaf src={leaf_bg} />
         <Project
           title={"airfilter"}
           description={
@@ -105,6 +107,7 @@ const Projects = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin-top: 10rem;
+    position: relative;
   }
 `;
 
@@ -124,6 +127,17 @@ const ViewProjects = styled.div`
     gap: 2rem;
     margin-top: 10rem;
     margin-bottom: 27rem;
+  }
+`;
+
+const BgLeaf = styled.img`
+  position: absolute;
+  display: none;
+  @media screen and (min-width: 1440px) {
+    z-index: -1;
+    display: unset;
+    top: -29%;
+    left: -15%;
   }
 `;
 
