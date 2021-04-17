@@ -25,7 +25,7 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <AppStyle className="App">
+    <div className="App">
       <GlobalStyle />
       <Nav />
       <AnimatePresence exitBeforeEnter>
@@ -54,16 +54,8 @@ function App() {
         </Switch>
       </AnimatePresence>
       <Footer callAction={callAction} />
-    </AppStyle>
+    </div>
   );
 }
-
-const AppStyle = styled.div`
-  @media screen and (min-width: 700px) {
-    body {
-      overflow: auto;
-    }
-  }
-`;
 
 export default App;

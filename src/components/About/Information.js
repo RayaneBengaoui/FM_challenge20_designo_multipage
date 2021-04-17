@@ -27,6 +27,7 @@ const Information = ({
 
 const InformationStyle = styled(motion.section)`
   min-height: 44rem;
+  transition: all 0.5s ease;
 
   @media screen and (min-width: 700px) {
     border-radius: 15px;
@@ -46,6 +47,8 @@ const Image = styled.div`
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  z-index: 2;
   background-image: url(${(props) => props.images.mobile});
 
   @media screen and (min-width: 700px) {
@@ -109,6 +112,18 @@ const Circle = styled.img`
   transform: rotate(90deg) translateX(-50%);
   right: 0;
   z-index: -1;
+
+  @media screen and (min-width: 700px) {
+    left: 0;
+    right: unset;
+    width: 60vw;
+  }
+  @media screen and (min-width: 1250px) {
+    width: 35rem;
+    left: 16%;
+    top: -10%;
+    transform: unset;
+  }
 `;
 
 export default Information;

@@ -16,6 +16,7 @@ import {
 import illustration_australia from "../assets/shared/desktop/illustration-australia.svg";
 import illustration_canada from "../assets/shared/desktop/illustration-canada.svg";
 import illustration_united_kingdom from "../assets/shared/desktop/illustration-united-kingdom.svg";
+import leaf_bg from "../assets/shared/desktop/bg-pattern-leaf.svg";
 
 const About = () => {
   return (
@@ -48,6 +49,8 @@ const About = () => {
         }
       />
       <CityLocations>
+        <BgLeafTop src={leaf_bg} />
+        <BgLeafBot src={leaf_bg} />
         <CityLocation
           illustration={illustration_canada}
           title="canada"
@@ -82,6 +85,7 @@ const About = () => {
 
 const AboutStyle = styled(motion.div)`
   min-height: 100vh;
+  overflow: hidden;
 
   @media screen and (min-width: 700px) {
     padding: 0 2.5rem;
@@ -106,6 +110,29 @@ const CityLocations = styled(motion.div)`
     min-height: 10vh;
     display: flex;
     justify-content: space-between;
+    position: relative;
+  }
+`;
+
+const BgLeafBot = styled.img`
+  position: absolute;
+  display: none;
+  transform: rotate(180deg);
+  z-index: -5;
+  @media screen and (min-width: 1250px) {
+    display: unset;
+    top: 42%;
+    right: -50%;
+  }
+`;
+const BgLeafTop = styled.img`
+  position: absolute;
+  display: none;
+  z-index: -5;
+  @media screen and (min-width: 1250px) {
+    display: unset;
+    top: -240%;
+    left: -15%;
   }
 `;
 

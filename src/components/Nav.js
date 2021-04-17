@@ -124,7 +124,7 @@ const Line = styled.span`
 
 const NavLinks = styled.nav`
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: ${(props) => (props.toggle ? `6rem` : "100%")};
   left: 0;
   width: 100%;

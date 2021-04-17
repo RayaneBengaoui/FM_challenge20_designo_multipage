@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+import twoCircles_bg from "../../assets/contact/mobile/bg-pattern-hero-contact-mobile.svg";
+import bigCircle_bg from "../../assets/contact/desktop/bg-pattern-hero-desktop.svg";
+
 const Form = () => {
   return (
     <FormStyle>
@@ -50,12 +53,18 @@ const FormStyle = styled.div`
   display: flex;
   flex-direction: column;
   padding: 4.5rem 1.5rem;
-
+  background-image: url(${twoCircles_bg});
+  background-repeat: no-repeat;
+  background-position: 20% 0%;
   @media screen and (min-width: 700px) {
+    background-image: url(${bigCircle_bg});
+    background-position: -8rem -80%;
     border-radius: 15px;
     padding: 4.5rem 3.75rem;
   }
   @media screen and (min-width: 1250px) {
+    background-position: 0% -5.1rem;
+    background-size: 50%;
     max-width: 1111px;
     margin: auto;
     flex-direction: row;

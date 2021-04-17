@@ -10,6 +10,7 @@ import ScrollTop from "../components/ScrollTop";
 import illustration_australia from "../assets/shared/desktop/illustration-australia.svg";
 import illustration_canada from "../assets/shared/desktop/illustration-canada.svg";
 import illustration_united_kingdom from "../assets/shared/desktop/illustration-united-kingdom.svg";
+import leaf_bg from "../assets/shared/desktop/bg-pattern-leaf.svg";
 
 const Contact = () => {
   return (
@@ -24,6 +25,7 @@ const Contact = () => {
         <Form />
       </FormContainer>
       <CityLocations>
+        <BgLeaf src={leaf_bg} />
         <CityLocation
           illustration={illustration_canada}
           title="canada"
@@ -48,6 +50,7 @@ const Contact = () => {
 
 const ContactStyle = styled(motion.div)`
   min-height: 100vh;
+  overflow: hidden;
 
   @media screen and (min-width: 700px) {
     padding: 0 2.5rem;
@@ -60,6 +63,7 @@ const CityLocations = styled(motion.div)`
   min-height: 100vh;
   padding: 0 1.5rem;
   margin: 7.5rem 0;
+  position: relative;
 
   @media screen and (min-width: 1250px) {
     min-height: 10vh;
@@ -74,6 +78,19 @@ const FormContainer = styled(motion.div)`
 
   @media screen and (min-width: 1250px) {
     min-height: 30rem;
+  }
+`;
+
+const BgLeaf = styled.img`
+  position: absolute;
+  display: none;
+
+  z-index: -5;
+
+  @media screen and (min-width: 1250px) {
+    display: unset;
+    top: 21%;
+    left: 24%;
   }
 `;
 

@@ -4,6 +4,9 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Icon } from "leaflet";
 
+import smallCircle_bg from "../assets/shared/desktop/bg-pattern-small-circle.svg";
+import twoCircles_bg from "../assets/shared/desktop/bg-pattern-two-circles.svg";
+
 const Map = ({
   x,
   y,
@@ -93,6 +96,9 @@ const MapInformation = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-image: url(${smallCircle_bg});
 
   h2 {
     color: #e7816b;
@@ -122,6 +128,9 @@ const MapInformation = styled.div`
     overflow: hidden;
     margin-top: 2rem;
     flex-direction: row;
+    background-image: url(${twoCircles_bg});
+    background-size: 85%;
+    background-position: 5%;
 
     p {
       text-align: left;
