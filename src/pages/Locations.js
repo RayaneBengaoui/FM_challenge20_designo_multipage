@@ -27,8 +27,8 @@ const Locations = () => {
           contactM={"M : contact@designo.co"}
         />
         <Map
-          x={-30.3}
-          y={149.7}
+          x={-30.329}
+          y={149.788}
           country={"Australia"}
           office={"Designo AU Office"}
           adress={"19 Balonne Street New South Wales 2443"}
@@ -37,8 +37,8 @@ const Locations = () => {
           flexDir="reverse"
         />
         <Map
-          x={51.7}
-          y={-3.8}
+          x={51.732}
+          y={-3.862}
           country={"United Kingdom"}
           office={"Designo UK Office"}
           adress={"13  Colorado Way Rhyd-y-fro SA8 9GA"}

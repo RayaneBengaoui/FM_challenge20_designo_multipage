@@ -24,7 +24,7 @@ const Map = ({
     <MapStyle flexDir={flexDir}>
       <MapContainer center={[x, y]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          attribution='Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
           url={tileOpenMap}
         />
         <Marker
@@ -130,7 +130,7 @@ const MapInformation = styled.div`
     flex-direction: row;
     background-image: url(${twoCircles_bg});
     background-size: 85%;
-    background-position: 5%;
+    background-position: 50%;
 
     p {
       text-align: left;
