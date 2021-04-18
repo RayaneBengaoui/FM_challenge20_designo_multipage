@@ -1,21 +1,23 @@
 export const pageAnimation = {
   hidden: {
+    scale: 1.01,
     opacity: 0,
   },
   show: {
     opacity: 1,
+    scale: 1,
 
     transition: {
-      duration: 0.5,
+      duration: 0.7,
       when: "beforeChildren",
       staggerChildren: 0.5,
     },
   },
   exit: {
     opacity: 0,
-
+    scale: 1.01,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
     },
   },
 };
