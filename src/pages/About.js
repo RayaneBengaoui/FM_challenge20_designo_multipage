@@ -5,7 +5,6 @@ import { pageAnimation } from "../animation";
 
 import Information from "../components/About/Information";
 import CityLocation from "../components/CityLocation";
-import ScrollTop from "../components/ScrollTop";
 
 import {
   about_hero_images,
@@ -78,7 +77,6 @@ const About = () => {
           "We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, we inspire audiences to take action and drive real results."
         }
       />
-      <ScrollTop />
     </AboutStyle>
   );
 };

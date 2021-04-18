@@ -6,7 +6,6 @@ import { pageAnimation } from "../animation";
 import IntroductionProject from "../components/IntroductionProject";
 import ViewProject from "../components/ViewProject";
 import Project from "../components/Project";
-import ScrollTop from "../components/ScrollTop";
 
 import { web_design_images, app_design_images } from "../data";
 import image_change from "../assets/graphic-design/desktop/image-change.jpg";
@@ -62,8 +61,6 @@ const GraphicDesign = () => {
           linkPath="/webdesign/"
         />
       </ViewProjects>
-
-      <ScrollTop />
     </GraphicDesignStyle>
   );
 };

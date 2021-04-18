@@ -5,8 +5,6 @@ import { pageAnimation } from "../animation";
 
 import Map from "../components/Map";
 
-import ScrollTop from "../components/ScrollTop";
-
 const Locations = () => {
   return (
     <LocationsStyle
@@ -46,7 +44,6 @@ const Locations = () => {
           contactM={"M : contact@designo.uk"}
         />
       </Maps>
-      <ScrollTop />
     </LocationsStyle>
   );
 };

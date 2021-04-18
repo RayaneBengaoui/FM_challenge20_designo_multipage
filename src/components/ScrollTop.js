@@ -7,6 +7,7 @@ const ScrollTop = () => {
     window.scroll({
       top: 0,
       left: 0,
+      behavior: "smooth",
     });
   }, [pathname]);
   return null;

@@ -5,7 +5,6 @@ import { pageAnimation } from "../animation";
 
 import Form from "../components/Contact/Form";
 import CityLocation from "../components/CityLocation";
-import ScrollTop from "../components/ScrollTop";
 
 import illustration_australia from "../assets/shared/desktop/illustration-australia.svg";
 import illustration_canada from "../assets/shared/desktop/illustration-canada.svg";
@@ -42,8 +41,6 @@ const Contact = () => {
           circle_rotation="-90deg"
         />
       </CityLocations>
-
-      <ScrollTop />
     </ContactStyle>
   );
 };

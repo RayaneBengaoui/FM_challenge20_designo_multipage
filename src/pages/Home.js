@@ -5,7 +5,6 @@ import styled from "styled-components";
 import Introduction from "../components/HomePage/Introduction";
 import ViewProjects from "../components/HomePage/ViewProjects";
 import Features from "../components/HomePage/Features";
-import ScrollTop from "../components/ScrollTop";
 
 import { pageAnimation } from "../animation";
 
@@ -21,7 +20,6 @@ const Home = () => {
       <Introduction />
       <ViewProjects />
       <Features />
-      <ScrollTop />
     </HomeStyle>
   );
 };
