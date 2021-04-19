@@ -40,8 +40,12 @@ const Introduction = () => {
           </motion.button>
         </Link>
       </Presentation>
-      <BackgroundCircle src={background_circle} />
-      <Phone src={phone} style={{ y: phone_y, translateX: "-50%" }} />
+      <BackgroundCircle src={background_circle} alt="circle" />
+      <Phone
+        src={phone}
+        style={{ y: phone_y, translateX: "-50%" }}
+        alt="phone"
+      />
     </IntroductionStyle>
   );
 };

@@ -48,8 +48,8 @@ const About = () => {
         }
       />
       <CityLocations>
-        <BgLeafTop src={leaf_bg} />
-        <BgLeafBot src={leaf_bg} />
+        <BgLeafTop src={leaf_bg} alt="leaf" />
+        <BgLeafBot src={leaf_bg} alt="leaf" />
         <CityLocation
           illustration={illustration_canada}
           title="canada"

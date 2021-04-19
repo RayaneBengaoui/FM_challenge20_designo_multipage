@@ -19,7 +19,7 @@ const Information = ({
         <h2>{title}</h2>
         <p>{description}</p>
         {doubletext && <p className="secondParagraph">{doubletext} </p>}
-        {theme === "dark" && <Circle src={one_circle_bg} />}
+        {theme === "dark" && <Circle src={one_circle_bg} alt="circle" />}
       </TextContainer>
     </InformationStyle>
   );

@@ -14,7 +14,7 @@ import leaf_bg from "../../assets/shared/desktop/bg-pattern-leaf.svg";
 const ViewProjects = () => {
   return (
     <ViewProjectsStyle>
-      <BgLeaf src={leaf_bg} />
+      <BgLeaf src={leaf_bg} alt="leaf" />
       <ViewProject
         title="web design"
         images={web_design_images}

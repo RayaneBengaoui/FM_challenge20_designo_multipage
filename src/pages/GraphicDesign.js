@@ -29,7 +29,7 @@ const GraphicDesign = () => {
         }
       />
       <Projects>
-        <BgLeaf src={leaf_bg} />
+        <BgLeaf src={leaf_bg} alt="leaf" />
         <Project
           title={"tim brown"}
           description={`A book cover designed for 

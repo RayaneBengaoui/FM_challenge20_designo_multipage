@@ -4,7 +4,7 @@ const Project = ({ title, description, image }) => {
   return (
     <ProjectStyle>
       <ImageContainer>
-        <Image src={image}></Image>
+        <Image src={image} alt="project cover"></Image>
       </ImageContainer>
 
       <TextContainer>

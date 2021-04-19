@@ -24,7 +24,7 @@ const Contact = () => {
         <Form />
       </FormContainer>
       <CityLocations>
-        <BgLeaf src={leaf_bg} />
+        <BgLeaf src={leaf_bg} alt="leaf" />
         <CityLocation
           illustration={illustration_canada}
           title="canada"

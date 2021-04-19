@@ -32,7 +32,7 @@ const WebDesign = () => {
         }
       />
       <Projects>
-        <BgLeaf src={leaf_bg} />
+        <BgLeaf src={leaf_bg} alt="leaf" />
         <Project
           title={"express"}
           description={

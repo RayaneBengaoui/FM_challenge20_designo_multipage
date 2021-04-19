@@ -30,7 +30,7 @@ const Nav = () => {
     <NavStyle>
       <NavContainer>
         <Link className="logoContainer" to="">
-          <Logo src={logo_dark} />
+          <Logo src={logo_dark} alt="designo dark logo" />
         </Link>
         <Burger
           toggle={toggle}

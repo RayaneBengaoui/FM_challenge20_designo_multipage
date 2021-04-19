@@ -12,7 +12,7 @@ const ViewProject = ({ title, images, linkPath, row, column }) => {
           <h1>{title}</h1>
           <LinkContainer>
             <p>View Projects</p>
-            <Arrow className="arrow" src={icon_right_arrow} />
+            <Arrow className="arrow" src={icon_right_arrow} alt="arrow" />
           </LinkContainer>
         </ViewProjectStyle>
       </Link>

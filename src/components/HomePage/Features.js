@@ -11,7 +11,7 @@ import leaf_bg from "../../assets/shared/desktop/bg-pattern-leaf.svg";
 const Features = () => {
   return (
     <FeaturesStyle>
-      <BgLeaf src={leaf_bg} />
+      <BgLeaf src={leaf_bg} alt="leaf" />
       <Feature
         illustration={illustration_passionate}
         title="Passionate"
