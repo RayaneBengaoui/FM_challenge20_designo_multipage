@@ -55,6 +55,8 @@ const ViewProjectsStyle = styled(motion.section)`
     min-height: 640px;
     position: relative;
     margin: 5rem auto;
+    padding-top: 0;
+    margin-top: 10rem;
   }
 `;
 
