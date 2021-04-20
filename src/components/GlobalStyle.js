@@ -108,6 +108,14 @@ input, textarea{
     }
 }
 
+.selected{
+    color: var(--peach);
+    span{
+        color: var(--peach);
+    }
+ 
+}
+
 `;
 
 export default GlobalStyle;

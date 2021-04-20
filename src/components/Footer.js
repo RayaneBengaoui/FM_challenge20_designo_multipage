@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import CallAction from "./CallAction";
 
@@ -19,9 +19,15 @@ const Footer = ({ callAction }) => {
         <Navigation>
           <Logo src={logo_light} />
           <NavLinks>
-            <Link to="/about">OUR COMPANY</Link>
-            <Link to="/locations">LOCATIONS</Link>
-            <Link to="/contact">CONTACT</Link>
+            <NavLink to="/about" activeClassName="selected">
+              OUR COMPANY
+            </NavLink>
+            <NavLink to="/locations" activeClassName="selected">
+              LOCATIONS
+            </NavLink>
+            <NavLink to="/contact" activeClassName="selected">
+              CONTACT
+            </NavLink>
           </NavLinks>
         </Navigation>
         <Contacts>

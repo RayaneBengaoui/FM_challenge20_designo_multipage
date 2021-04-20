@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { useWindowSize } from "./WindowSize";
 
@@ -41,15 +41,29 @@ const Nav = () => {
           <Line className="line3" />
         </Burger>
         <NavLinks toggle={toggle}>
-          <Link className="firstLink" to="/about" onClick={toggleHandler}>
+          <NavLink
+            className="firstLink"
+            activeClassName="selected"
+            to="/about"
+            onClick={toggleHandler}
+          >
             <span>OUR COMPANY</span>
-          </Link>
-          <Link to="/locations" onClick={toggleHandler}>
+          </NavLink>
+          <NavLink
+            to="/locations"
+            activeClassName="selected"
+            onClick={toggleHandler}
+          >
             <span>LOCATIONS</span>
-          </Link>
-          <Link className="lastLink" to="/contact" onClick={toggleHandler}>
+          </NavLink>
+          <NavLink
+            className="lastLink"
+            activeClassName="selected"
+            to="/contact"
+            onClick={toggleHandler}
+          >
             <span> CONTACT</span>
-          </Link>
+          </NavLink>
         </NavLinks>
       </NavContainer>
     </NavStyle>
@@ -155,7 +169,7 @@ const NavLinks = styled.nav`
 
     @media screen and (min-width: 700px) {
       background: unset;
-      color: black;
+      color: #333136;
       font-size: 14px;
       padding: 0 0;
     }
