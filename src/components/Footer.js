@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import CallAction from "./CallAction";
 
@@ -17,7 +17,9 @@ const Footer = ({ callAction }) => {
       <FooterContent>
         {callAction && <CallAction />}
         <Navigation>
-          <Logo src={logo_light} />
+          <Link className="logoContainer" to="">
+            <Logo src={logo_light} />
+          </Link>
           <NavLinks>
             <NavLink to="/about" activeClassName="selected">
               OUR COMPANY
